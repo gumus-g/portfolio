@@ -1,0 +1,482 @@
+/* 
+This style sheet can be used for reference
+but not for an assignment.
+*/
+
+/* Center the body in the middle of the viewport 
+by defining min and max widths with auto right/left margins
+*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "~react-image-gallery/styles/css/image-gallery.css";
+/*   ----- Variables  -----  */
+:root {
+    --dark-red:#974349;
+    --dark-grey:#3D3C4C;
+    --dark-yellow:#F1BD77;
+    --peach:#FF9271;
+    --grey:#e7ded6;
+    --purple:rgb(227, 51, 227);
+    --orange:#ffa500;
+    --bej:rgb(245, 245, 220);
+    --blue:#0f0fb1;
+    --dark-redT:rgba(151, 67, 73, .5);    
+  }
+  
+  /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+  body {       /* Can alternatively define in html {}. */
+    display: block;
+    background-color:var(--bej);
+    background-image:url(images/background-sunset-clouds-in-oregon.jpg);
+    background-attachment: fixed;
+    background-position: top left;    
+    background-size: cover;
+    background-repeat:no-repeat;  
+
+    color:solid var(--blue) ;
+    font-family: "Noto Sans", sans-serif; /* Define with at least one font name and its related generic family name.*/
+    font-weight: 400;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 80%;
+    font-size:1em;
+    line-height:1.2;
+  }
+  
+  /*  ----- Page layout blocks -----  */
+  header img{
+    width: 60px;
+    margin:0;
+    padding-top: 4px; 
+  }
+  header, footer {
+    background-color:#FF9271;
+    margin: 5;
+    padding: 2%;
+  }
+
+  main {
+    display: block;
+    unicode-bidi: isolate;
+    background-color: hwb(191 76% 11%);
+    padding: 5px;
+  }
+
+  section {
+    background-color:rgb(243, 223, 191);
+    border-radius: 5px;
+    margin: 1%;
+    padding: 3%;
+  }
+  article {
+    border-top: 5px solid slateblue;       
+  }
+    #servers {color:#1b0000;}
+    #fronted {color:#1b0000;}
+    #images{color:#1b0000;}
+    #favicons{color:#1b0000;}
+    #css{color: #1b0000;}
+    #js{color: #1b0000;}
+  div {
+    color: #000;
+  }
+  aside {
+    color: #000;
+    float: right;
+    width: 180px;
+    border: 3px solid rgb(92, 15, 61);
+    margin: 0.5rem;
+    padding: 10px ;
+    background-color: var(--dark-yellow);
+    float:right
+  }
+  footer {    
+    display: block;
+    unicode-bidi: isolate;
+  }
+  
+  /* ----- Anchors ----- Text links */
+  a { }
+  a:link {
+    color: var(--dark-grey);
+    text-decoration: none;
+    border: 1px solid red;
+  }
+  a:hover {
+    color: rgb(62, 62, 194);
+    background-color:var(--dark-yellow);
+  }
+  a:active {
+    color: red;
+  }
+  a:visited {
+    color: #b657b6;
+  }
+  
+  /*  ----- Navigation ----- Override text links for navigation only.  */
+  nav {
+    text-align:center;
+    display: flex;
+    flex-flow: row wrap;
+    margin: .8% 0 1% 0;
+    padding: 0;
+    
+  }   
+  .local {
+    display:flex;
+    flex-flow: row wrap ;
+    margin: 5px;    
+  } 
+  
+  .global {
+    display: flex;
+
+  }
+  nav a {    
+    background-color:#dacecefc;
+    border:2px solid rgb(79, 1, 1);
+    border-radius:5px 5px 0 0; 
+    color: hsl(118, 36%, 73%);
+    font-size:1.1em;
+    font-weight:bold;
+    margin-right: 3px;
+    line-height: 1;
+    padding: 3px 20px 5px 20px;
+    text-decoration:none;    
+    vertical-align: middle;
+  }
+  nav a:hover {
+    background-color:rgb(230, 232, 111);
+    color:black
+  }  
+  
+  /*  -----  Typography  ----- */
+  p {}
+  br {}
+  ol, ul, dl {}
+  li {}
+  dt {}
+  dd {}
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: italic;    
+  } 
+  h1 {
+    color: var(--dark-grey);
+  }
+  h2 {
+    color: var(--dark-grey);
+  }
+  h3 {
+    color: var(--dark-grey);
+  }
+  h4 {
+    color:var(--dark-grey);
+  }
+  h5 {
+    color: var(--dark-grey);
+  }
+  h6 {
+    color: var(--dark-grey);
+  }
+  
+  abbr {}
+  acronym {}
+  address {}
+  blockquote {}
+  q {}
+  cite {}
+  em {}
+  hr {}
+  mark {}
+  s {}
+  span {}
+  strong {}
+  sub {}
+  sup {}
+  time {}
+  
+  /*  ----- Coding or instructional typography ----- */
+  pre {}
+  code {}
+  kbd {}
+  samp {}
+  var {}
+  del {} 
+  ins {}
+  
+  /*  ----- Table ----- */
+  table {
+    border-collapse:collapse;
+    width: 99%;
+    background-color: var(--grey);
+    font-family: sans-serif;
+    margin: 0 2px;
+    
+  }
+  table img {
+    height: 20%;
+    width: 20px;
+    border: 2px solid var(--blue);
+  }
+  
+  caption {
+    background-color:var(--orange); 
+    border:2px solid gray; 
+    color:white; 
+    font-weight:bold; 
+    padding:1% 0;
+  }
+  thead {}
+
+  tbody {
+    text-align:center;
+  }
+  tfoot {}
+
+  tr {
+    border-bottom:1px solid var(--orange);
+    display: table-row;
+    padding: 2%;
+    background-color: var(--grey);
+  }
+
+  tr:nth-child(even) {}
+
+  th {
+    background-color: var(--grey);
+    padding:1%;
+    text-align:center;
+    min-width: 100px;
+  }
+ 
+  td {
+    border-bottom:1px solid var(--orange);
+    text-align: left;
+    padding-left: 4%;
+  }
+
+  td:nth-child(1) {}
+  colgroup {}
+  data {}
+  datalist {}
+  
+  
+  /*  ----- Form ----- */
+  form {
+    font-family: "Noto Sans", sans-serif;    
+  }
+  fieldset {
+    border: 3px solid var(--orange);
+    background-color: var(--grey);
+    margin-bottom: 4%;
+    padding: 3%;
+    color: var(--dark-grey);
+  }
+  legend {
+    background-color: var(--peach);
+    border: 2px solid var(--dark-grey);
+    border-bottom: 0;
+    padding-inline-start: 2px;
+    padding-inline-end: 2px;
+  }
+  label {
+    display: block;
+    padding: 1%;
+    margin-top: 3%;
+    margin-right: 20%;
+    font-size: 90%;
+    color: var(--dark-grey);
+    background-color: solid var(--grey);
+    width: 95%;
+  }  
+  
+  :autofocus:outline-style {color:#361390;}
+
+    
+  input::placeholder { 
+    color:darkgray; 
+  }
+
+  input {
+    padding: 2%;
+    font-size: 120%;
+    color: var(--dark-grey);
+    font-family: inherit;
+  }
+
+  button {
+    border-right: 3px solid var(--dark-grey);
+    border-radius: 0 3px 3px 0;
+    color: var(--peach);
+    background-color: var(--grey);
+    font-size: 110%;
+    padding: 2%;
+    font-family: inherit;
+    width: 20%;
+  } 
+
+  button:hover {
+    color: var(--blue);
+    background-color: var(--peach);
+  }
+
+  input[type="text"],
+  input[type="email"],
+
+  textarea {width: 80%;}
+  textarea {
+    height: 200px;    
+  }
+  textarea {
+    color: var(--dark-red);
+    background-color: var(--grey);
+    font-family: inherit;
+    padding: 1%;
+    font-size: 100%;
+    margin-bottom: 2%;
+    border: 2px solid var(--dark-grey);
+  } 
+
+  :focus {
+    background-color: var(--dark-yellow);
+  }
+
+  ::placeholder {
+    color: var(--peach);
+    font-size: 80%;
+  }
+
+  label {
+    display: block;
+    margin-top: 2%;
+  }
+
+  label.required:after {
+    content: "*";
+    color: #09095f;
+  }
+
+  * :required {
+    border: 2px solid rgb(19, 138, 19);
+  } 
+
+  select {
+    color: var(--dark-red);
+    background-color: var(--dark-yellow);
+    font-size: 110%;
+    font-family: inherit;
+    padding: 2%;
+    width: 85%;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {width: auto;}
+
+  input[type="number"] {width: 100px;;}
+
+  input[type=checkbox]:checked + label { 
+    color: var(--dark-red); 
+    font-style: italic; 
+ }
+
+
+  optgroup {}
+  option {}
+  textarea {}
+  output {}
+  meter {}
+  progress {}
+  
+  
+  /* ----- Media ----- */
+  figure {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+    unicode-bidi: isolate;
+  }
+  figcaption {
+    unicode-bidi: isolate;
+  }
+  figure img {}  
+  svg {}
+  picture {}
+  source {}
+  iframe {}
+  video {}
+  audio {}
+  embed {}
+  object {}
+  
+  /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+  .gallery {
+    display:flex;
+    flex-flow: row wrap;
+    margin: 0;
+    padding: 0;
+  }  
+  .gallery figure {
+    background-color: var(--dark-yellow);
+    border: 2px solid var(--dark-red);
+    border-radius: 4px;  
+    width: 320px;
+    margin: 1%;
+    padding: 1%;
+  }
+  .gallery img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }  
+
+  .gallery figcaption {
+    color: #24084d;
+    display: block;
+    padding: 1% 1% 2% 1%;
+  }  
+  
+  .floatright {}
+  .floatleft {}
+  .center-middle {}
+  
+  .ten {}
+  .twenty {}
+  .thirty {}
+  .forty {}
+  .fifty {}
+  .sixty {}
+  .seventy {}
+  .eighty {}
+  
+  .radius {}
+  .circle {}
+  .boxshadow {}
+  .tshadow {} 
+  .gradient {}
+  .shape {}
+  
+  @keyframes App-logo {}
+  
+  /*   ===== TABLET  media query overrides mobile styles ===== */
+  @media all and (min-width: 600px) {}
+
+  @media (max-width: 768px){
+    .local {
+      flex-direction: column;
+    }
+    .local a {
+      margin: 10px 0;
+    }
+  }
+  
+  /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+  @media all and (min-width: 1080px) {}
+  
+  /*   ===== PRINT  media query overrides previous styles =====  */
+  @media print {}

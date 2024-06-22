@@ -1,0 +1,88 @@
+### CREATE five documents.
+POST http://localhost:3000/recipes HTTP/1.1
+content-type: application/json
+
+{
+    "recipTitle": "Red Lentil Soup",
+    "prepTime": 30,
+    "ingredients": "Red lentil, onion, carrot, lemon, flavors.",
+    "date": "5-25-24"
+}
+
+
+### CREATE 2
+POST http://localhost:3000/recipes HTTP/1.1
+content-type: application/json
+
+{
+    "recipTitle": "Green Salad",
+    "prepTime": 15,
+    "ingredients": "Romaine lettuce heart, cucumber, tomatoes, parsley, salt, onion, olive oil, lemon.",
+    "date": "5-25-24"
+}
+
+### CREATE 3
+POST http://localhost:3000/recipes HTTP/1.1
+content-type: application/json
+
+{
+    "recipTitle": "Roasted Eggplant Salad",
+    "prepTime": 30,
+    "ingredients": "Eggplant, bell pepper, onion, garlic, parsley, sumac, lemon, olive oil.",
+    "date": "5-25-24"
+}
+
+### CREATE 4
+POST http://localhost:3000/recipes HTTP/1.1
+content-type: application/json
+
+{
+    "recipTitle": "Turkish Semolina Halva",
+    "prepTime": 20,
+    "ingredients": "Semolina, butter, sugar, milk, water, ground cinnamon, pine nuts.",
+    "date": "5-25-24"
+}
+
+### CREATE 5
+POST http://localhost:3000/recipes HTTP/1.1
+content-type: application/json
+
+{
+    "recipTitle": "Turkish Chicken Kebab",
+    "prepTime": 15,
+    "ingredients": "Boneless, skinless chicken thighs, onion, garlic, plain yogurt, tomato paste, spices.",
+    "date": "5-25-24"
+}
+
+
+### RETRIEVE all documents.
+GET http://localhost:3000/recipes HTTP/1.1
+
+
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3000/recipes/66538224d11b70bb4a85bfd0 HTTP/1.1
+
+
+### UPDATE one document's year, by ID.
+### Replace the ID in the following request with one that exists
+### and update the year:
+PUT http://localhost:3000/recipes/66538224d11b70bb4a85bfd0 HTTP/1.1
+content-type: application/json
+
+{
+    "recipTitle": "Turkish Chicken Kebab",
+    "prepTime": 15,
+    "ingredients": "Boneless, skinless chicken thighs, onion, garlic, plain yogurt, tomato paste, spices.",
+    "date": "5-25-24"
+}
+
+### DELETE by ID (responds with nothing if successful):
+DELETE http://localhost:3000/recipes/665381afd11b70bb4a85bfcc HTTP/1.1
+
+
+
+### RETRIEVE all documents (responds with 4 or the original 5):
+GET http://localhost:3000/recipes HTTP/1.1
+
